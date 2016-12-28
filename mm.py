@@ -60,7 +60,7 @@ class MasterMinder():
     def __generateSecret(self):
         num = random.randint(0, 9999)
         self.__secret = self.__num_to_string(num)
-        print("Secret: %s" % self.__secret)
+        #print("Secret: %s" % self.__secret)
 
     def __num_to_string(self, num):
         retvalue = None
