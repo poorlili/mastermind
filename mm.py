@@ -60,6 +60,7 @@ class MasterMinder():
     def __generateSecret(self):
         num = random.randint(0, 9999)
         self.__secret = self.__num_to_string(num)
+        print("[Secret generated]")
         #print("Secret: %s" % self.__secret)
 
     def __num_to_string(self, num):
@@ -72,6 +73,7 @@ class MasterMinder():
         return retvalue
 
     def __update_table(self):
+        self.__datatable.remove_candidate(int(self.__guess))
         for i in range(self.__datatable.size):
             f, p = self.__evaluate_guess(secret = self.__guess, guess = self.__num_to_string(i))
             if (f, p) != (self.__full, self.__partial):
