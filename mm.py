@@ -89,7 +89,7 @@ class MasterMinder():
             else:
                 self.__guess = g
             self.__full, self.__partial = self.__evaluate_guess(secret = self.__secret, guess = self.__guess)
-            rem = self.__update_table() - 1
+            rem = self.__update_table() 
             count += 1
             print("%d) %s %d %d [%d left]" %(count, self.__guess, self.__full, self.__partial, rem))
             if self.__full == 4:
